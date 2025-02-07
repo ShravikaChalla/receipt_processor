@@ -1,0 +1,104 @@
+### Request 1: Test Case 1
+POST http://localhost:8080/receipts/process
+Content-Type: application/json
+
+{
+  "retailer": "Target",
+  "purchaseDate": "2022-01-01",
+  "purchaseTime": "13:01",
+  "items": [
+    {
+      "shortDescription": "Mountain Dew 12PK",
+      "price": "6.49"
+    },{
+      "shortDescription": "Emils Cheese Pizza",
+      "price": "12.25"
+    },{
+      "shortDescription": "Knorr Creamy Chicken",
+      "price": "1.26"
+    },{
+      "shortDescription": "Doritos Nacho Cheese",
+      "price": "3.35"
+    },{
+      "shortDescription": "   Klarbrunn 12-PK 12 FL OZ  ",
+      "price": "12.00"
+    }
+  ],
+  "total": "35.35"
+}
+
+### Response 1: Get Point
+### Expected Response - 28
+GET http://localhost:8080/receipts/ed178405-e169-4544-96ef-a16651f78808/points
+Content-Type: application/json
+
+
+### Request 2: Test Case 2
+POST http://localhost:8080/receipts/process
+Content-Type: application/json
+
+{
+  "retailer": "M&M Corner Market",
+  "purchaseDate": "2022-03-20",
+  "purchaseTime": "14:33",
+  "items": [
+    {
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    },{
+      "shortDescription": "Gatorade",
+      "price": "2.25"
+    }
+  ],
+  "total": "9.00"
+}
+
+### Response 2: Get Point
+### Expected Response - 109
+GET http://localhost:8080/receipts/f5a02a3d-4c3e-467f-9ecd-d958331d7625/points
+Content-Type: application/json
+
+### Request 3: Test Case 3
+POST http://localhost:8080/receipts/process
+Content-Type: application/json
+
+{
+    "retailer": "Target",
+    "purchaseDate": "2022-01-02",
+    "purchaseTime": "13:13",
+    "total": "1.25",
+    "items": [
+        {"shortDescription": "Pepsi - 12-oz", "price": "1.25"}
+    ]
+}
+
+### Request 3: Get Point
+### Expected Response - 31
+GET http://localhost:8080/receipts/7836783c-9e4f-4ac7-812f-dea52f146318/points
+Content-Type: application/json
+
+### Request 4: Test Case 4
+POST http://localhost:8080/receipts/process
+Content-Type: application/json
+
+{
+    "retailer": "Walgreens",
+    "purchaseDate": "2022-01-02",
+    "purchaseTime": "08:13",
+    "total": "2.65",
+    "items": [
+        {"shortDescription": "Pepsi - 12-oz", "price": "1.25"},
+        {"shortDescription": "Dasani", "price": "1.40"}
+    ]
+}
+
+### Request 4: Get Point
+### Expected Response - 15
+GET http://localhost:8080/receipts/59680b91-7b26-44bf-b594-a5fd0978ec49/points
+Content-Type: application/json
