@@ -36,17 +36,16 @@ based test runner (without JUnit) for verifying functionality—including tests 
 
 1. **Install Go (Golang)**
 
-  To run the application, you need to have Go installed on your machine. Follow these steps:
+To run the application, you need to have Go installed on your machine. Follow these steps:
 
 - **Linux/Mac**: Follow the official guide: [Installing Go on Linux/Mac](https://golang.org/doc/install)
 - **Windows**: Follow the guide here: [Installing Go on Windows](https://golang.org/doc/install#installing_on_windows)
 
 You can verify the installation by running the following command in your terminal:
->go version
+> go version
 
-- **Install VCode**: 
+- **Install VCode**:
 - **Install Go Plugin**: ![Go to the Extension and search for GO ](images/go_lang_plugin.jpg)
-
 
    ```
 2. **Clone the repository:**
@@ -55,7 +54,6 @@ You can verify the installation by running the following command in your termina
    git clone <repository_url>
    cd <repository_directory>
    ```
-
 
 ### 1. Running Normally
 
@@ -170,23 +168,27 @@ The service will be available on port **8080**.
 Ensure you have **Postman** installed on your system.
 
 ### 1. Install Postman
+
 - Download and install Postman from [here](https://www.postman.com/downloads/).
 - Follow the installation steps based on your OS.
 
 ## Running the Postman JSON Script
 
 ### 2. Load the JSON File
+
 - Open **Postman**.
 - Click on **File** → **Import**.
 - Select the provided JSON file and import it.
 
 ### 3. Run POST Request
+
 - Loan postman collection json
 - Click Import and select from machine
 - Make sure application is up and running either using manually or using docker
 - Now you are good to run the test cases through postman
 
 ### 4. Example
+
 - Click on "Process Simple Receipt"
 - Request Body is already added just need to click on the "Send" button
 - It returns a valid response with id
